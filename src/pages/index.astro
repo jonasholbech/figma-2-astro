@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Astro + Figma">
+  <main>
+    <ul role="list" class="link-card-grid">
+      <Card label="Documentation" />
+      <Card label="Integrations" />
+      <Card label="Themes" />
+      <Card label="Community" />
+    </ul>
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: 700px;
+    margin: auto;
+    padding-top: 4rem;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    list-style-type: none;
+  }
+</style>

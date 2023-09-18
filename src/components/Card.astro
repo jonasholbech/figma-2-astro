@@ -1,0 +1,25 @@
+---
+const { label } = Astro.props;
+import Button from "./Button.astro";
+---
+
+<li class="link-card">
+  <h2>
+    {label}
+  </h2>
+  <Button label="YEAH!" />
+  <style>
+    h2 {
+      color: #000;
+      font-family: var(--font);
+      font-size: 2.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    li {
+      background-color: #d9d9d9;
+      padding: 1rem;
+    }
+  </style>
+</li>

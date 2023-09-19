@@ -15,19 +15,24 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <NavBar />
-    <slot />
-    <Footer />
+    <div id="app">
+      <NavBar />
+      <slot />
+      <Footer />
+    </div>
   </body>
 </html>
 <style is:global>
   :root {
+    /* Color styles */
     --font-color: rgba(0, 0, 0, 1);
     --primary--brand: rgba(217, 217, 217, 1);
     --secondary--brand: rgba(174, 172, 244, 1);
     --white: rgba(255, 255, 255, 1);
     --black: rgba(0, 0, 0, 1);
     --stroke: rgba(187, 187, 187, 1);
+    --primary--brand--variant: rgba(225, 225, 225, 1);
+    --secondary--brand--variant: rgba(200, 199, 249, 1);
 
     /* Text-size styles */
     /* base size: body (16px) */
@@ -72,5 +77,9 @@ const { title } = Astro.props;
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+  #app {
+    max-width: 1300px;
+    margin: auto;
   }
 </style>

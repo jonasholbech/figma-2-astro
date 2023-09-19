@@ -6,6 +6,10 @@ import Card from "../components/Card.astro";
 <Layout title="Astro + Figma">
   <main>
     <ul role="list" class="link-card-grid">
+      <Card label="Lorem" />
+      <Card label="Mand fundet i skov" />
+      <Card label="Ipsum" />
+      <Card label="Dollars" />
       <Card label="Documentation" />
       <Card label="Integrations" />
       <Card label="Themes" />
@@ -16,16 +20,14 @@ import Card from "../components/Card.astro";
 
 <style>
   main {
-    max-width: 700px;
-    margin: auto;
-    padding-top: 4rem;
+    padding: 2rem 0;
   }
   ul {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
     list-style-type: none;
   }
 </style>

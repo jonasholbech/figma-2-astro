@@ -1,16 +1,26 @@
 ---
-const { label } = Astro.props;
+const { label, variant = "" } = Astro.props;
 ---
 
-<button>
+<button data-variant={variant}>
   {label}
 </button>
 
 <style>
   button {
-    background-color: var(--secondary--brand);
+    background-color: var(--primary--brand);
     color: var(--white);
     border: none;
     padding: 0.5rem 1rem;
+    align-self: center;
+  }
+  button:hover {
+    background-color: var(--primary--brand--variant);
+  }
+  [data-variant="secondary"] {
+    background-color: var(--secondary--brand);
+  }
+  [data-variant="secondary"]:hover {
+    background-color: var(--secondary--brand--variant);
   }
 </style>
